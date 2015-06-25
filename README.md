@@ -23,6 +23,10 @@ How to run it
 ```
 git clone git@github.com:GBouffard/bookmark-manager.git
 cd bookmark-manager
+bundle
+psql
+CREATE DATABASE "bookmark_manager_test";
+CREATE DATABASE "bookmark_manager_development";
 ```
 
 How to run tests
