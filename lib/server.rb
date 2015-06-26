@@ -25,4 +25,10 @@ class BookmarkManager < Sinatra::Base
     Link.create(url: url, title: title, tags: tags)
     redirect('/')
   end
+
+  get '/tags/:text' do
+    tag = Tag.first(text: params[:text])
+    @links = tag ? tag.links : []
+    erb :index
+  end
 end
