@@ -1,4 +1,4 @@
-require 'sinatra'
+require 'sinatra/base'
 require 'data_mapper'
 
 env = ENV['RACK_ENV'] || 'development'
@@ -8,6 +8,17 @@ require './lib/link'
 DataMapper.finalize
 DataMapper.auto_upgrade!
 
-get '/' do
-  'Hello Bookmark manager!'
+class BookmarkManager < Sinatra::Base
+  set :views, proc { File.join(root, '..', 'views') }
+  get '/' do
+    @links = Link.all
+    erb :index
+  end
+
+  post '/links' do
+    url = params['url']
+    title = params['title']
+    Link.create(url: url, title: title)
+    redirect('/')
+  end
 end
