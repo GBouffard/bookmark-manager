@@ -1,7 +1,7 @@
+require 'capybara/rspec'
 require 'database_cleaner'
 ENV['RACK_ENV'] = 'test'
 require 'server'
-require 'capybara/rspec'
 
 Capybara.app = BookmarkManager
 
