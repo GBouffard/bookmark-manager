@@ -1,26 +1,28 @@
-<body>
-  <% if current_user %>
-    Welcome, <%= current_user.email %>
-    <form method='post' action='/sessions'>
-      <input type='hidden' name='_method' value='delete'>
-      <input type='submit' value='Sign out'>
-    </form>
-  <% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Guillaume 's Bookmark manager</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">  
+    <link rel="stylesheet" type="text/css" href="/css/application.css">  
+  </head>
 
-  <% if flash[:errors] && !flash[:errors].empty? %>
-    Sorry, there were the following problems with your registration:
-    <ul id='errors'>
-      <% flash[:errors].each do |error| %>
-        <li><%= error %></li>
-      <% end %>
-    </ul>
-  <% end %>
+  <body>
+    <%= partial :header %>
+    <% if flash[:errors] && !flash[:errors].empty? %>
+      Sorry, there were the following problems with your registration:
+      <ul id='errors'>
+        <% flash[:errors].each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    <% end %>
 
-  <% if flash[:notice] %>
-    <div id='notice'>
-      <%= flash[:notice] %>
-    </div>
-  <% end %>
+    <% if flash[:notice] %>
+      <div id='notice'>
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
 
-  <%= yield %>
-</body>
+    <%= yield %>
+  </body>
+</html>
