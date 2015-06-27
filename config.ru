@@ -1,2 +1,2 @@
-require './lib/server'
-run BookmarkManager
+require './app/server'
+run Sinatra::Application
