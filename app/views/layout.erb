@@ -9,7 +9,9 @@
   <body>
     <%= partial :header %>
     <%= partial :flash %>
-    <%= yield %>
+    <div id='container'>
+      <%= yield %>
+    </div>
     <%= partial :footer %>
   </body>
 </html>
