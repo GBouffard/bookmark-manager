@@ -5,5 +5,9 @@ post '/links' do
     Tag.first_or_create(text: tag)
   end
   Link.create(url: url, title: title, tags: tags)
-  redirect('/')
+  redirect to('/')
+end
+
+get '/links/new' do
+  erb :'links/new'
 end
