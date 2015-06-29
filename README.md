@@ -2,11 +2,11 @@
 ===
 This is me re-doing from scratch the Makers Academy tutorial: Bookmark Manager. We were supposed to build a Bookmark Manager also working with a users management system/database: users can create an account, login, post links and recover their password if necessary.
 
-<!-- ![](http_picture_to_come) -->
+![](public/images/bookmark_manager_screenshot.png)
 
 Objectives of exercise
 ----
-To learn about SQL databases and their integrations with ruby and with a Sinatra server.
+To learn about SQL databases and their integrations with ruby and with a Sinatra server through. Also, to learn about HTML and CSS.
 
 Technologies used
 ----
@@ -16,7 +16,9 @@ Technologies used
 - Rspec and Capybara
 - Sinatra
 - Git
-- other gems used: Bcrypt, Shotgun
+- Bcrypt
+- Rack-flash
+- HTML and CSS
 
 How to run it
 ----
@@ -27,11 +29,17 @@ bundle
 psql
 CREATE DATABASE "bookmark_manager_test";
 CREATE DATABASE "bookmark_manager_development";
+rackup
 ```
+you can now connect on localhost:9292, sign up, in, out and create bookmarks with tags.
 
 How to run tests
 ----
 ```
 cd bookmark-manager
-rspec
+rake
 ```
+
+and this is what you should see:
+
+![](public/images/BM_rspec_tests.png)

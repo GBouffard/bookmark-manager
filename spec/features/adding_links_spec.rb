@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'tilt/erubis'
 
 feature 'User adds a new link' do
   scenario 'without tags' do
