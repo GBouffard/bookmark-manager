@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.5'
 
 gem 'bcrypt-ruby'
 gem 'coveralls', require: false
@@ -15,4 +15,7 @@ group :development, :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'rspec'
+  gem 'rspec-sinatra'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
 end
