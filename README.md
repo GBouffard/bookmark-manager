@@ -2,7 +2,12 @@
 ===
 This is me re-doing from scratch the Makers Academy tutorial: Bookmark Manager. We were supposed to build a Bookmark Manager also working with a users management system/database: users can create an account, login, post links and recover their password if necessary.
 
+Heroku
+----
+[Guillaume's Bookmark Manager](https://guillaume-bookmark-manager.herokuapp.com/)
+
 ![](public/images/bookmark_manager_screenshot.png)
+
 
 Objectives of exercise
 ----
